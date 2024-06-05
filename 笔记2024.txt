@@ -1,0 +1,56 @@
+1. **.idea**：包含IntelliJ IDEA的项目特定设置和配置。
+
+2. **src**：包含所有应用的代码和资源。
+   - **main**：主要的源代码和资源。
+     - **java**：Java源文件。
+       - **com.yuanlrc.campus_market**：应用代码的基本包。
+         - **annotion**：可能包含自定义注解。
+         - **bean**：可能包含JavaBeans或POJOs（Plain Old Java Objects）。
+         - **config**：应用的配置类。
+           - **admin** 和 **home**：不同模块或层的子包。
+         - **constant**：应用中使用的常量。
+         - **controller**：处理HTTP请求的控制器。
+           - **admin**、**common** 和 **home**：应用不同部分的子包。
+         - **dao**：与数据库交互的数据访问对象。
+           - **admin** 和 **common**：应用不同部分的子包。
+         - **entity**：表示数据库表的实体类。
+           - **admin**、**common** 和 **home**：应用不同部分的子包。
+         - **interceptor**：处理HTTP请求和响应的拦截器。
+           - **admin** 和 **home**：应用不同部分的子包。
+         - **listener**：事件监听器。
+         - **schedule**：计划任务。
+           - **admin**：管理员特定的任务子包。
+         - **service**：包含业务逻辑的服务类。
+           - **admin** 和 **common**：应用不同部分的子包。
+         - **util**：实用工具类。
+     - **resources**：非Java资源，如属性文件、静态文件和模板。
+       - **backup**：可能是数据库备份或其他备份文件。
+       - **static**：静态资源，如CSS、JavaScript和图像。
+         - **admin** 和 **home**：应用不同部分的子包。
+       - **templates**：HTML模板。
+         - **admin** 和 **home**：应用不同部分的子包。
+       - **upload**：上传的文件目录，按日期组织。
+
+3. **test**：测试源代码目录。
+   - **java**：测试Java源文件。
+     - **com.yuanlrc.campus_market**：测试代码的基本包。
+
+4. **target**：构建输出目录，包含已编译的类和其他生成的文件。
+   - **classes**：主要源代码集的已编译类和资源。
+     - **backup**、**com.yuanlrc.campus_market**、**static**、**templates**、**upload**：对应源代码目录。
+   - **generated-sources**：生成的源代码（例如，注解处理生成的代码）。
+   - **generated-test-sources**：生成的测试源代码。
+   - **test-classes**：测试源代码集的已编译类和资源。
+
+### 关键元素解释
+
+- **Controllers（控制器）**：处理传入的HTTP请求并返回响应，通常与服务层接口。
+- **Services（服务）**：包含业务逻辑，通常由控制器调用。
+- **DAOs（数据访问对象）**：与数据库交互以执行CRUD操作。
+- **Entities（实体）**：表示数据库表的类，供DAOs使用。
+- **Interceptors（拦截器）**：拦截HTTP请求/响应以添加自定义处理。
+- **Configuration（配置）**：配置应用的各个方面（例如，安全、数据库）。
+- **Static Resources（静态资源）**：包括应用使用的CSS、JavaScript和图像文件。
+- **Templates（模板）**：应用渲染的HTML模板，用于生成动态网页。
+
+这种结构是一个组织良好的Spring Boot应用的典型结构，有助于分离关注点，使代码库更易于导航和维护。
